@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title>App de Compras</title>
+
+
+
+</head>
+
+<body>
+    <header>
+        <p>App Compras</p>
+    </header>
+
+    <section id="windowEmpty">
+        <h1 class="windowEmpty__title"> Aun no tienes productos para comprar</h1>
+        <h1 class="windowEmpty__emoji"><img src="/image/sad.png" alt=""></h1>
+    </section>
+
+    <section id="windowList">
+        <ul class="list-group" id="windowLoadList">
+
+        </ul>
+    </section>
+
+    <section id="windowDetail">
+        <img src="" alt="" class="windowDetail__icon" id="windowDetail__icon">
+        <h1 id="windowDetailProduct"></h1>
+        <p id="windowDetailInfo"></p>
+        <button id="btnBorrar">Eliminar</button>
+        <button id="windowDetailClose">Cerrar</button>
+    </section>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#windowLoad" id="load_boton">Add+ </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="windowLoad" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Productos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label for="windowLoadProduct" class="form-label">Ingresa tu Producto</label>
+                        <input type="text" class="form-control" id="windowLoadProduct" placeholder="leche/carne">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="windowLoadIcon" class="form-label">Selecciona Categoria </label>
+                        <select id="windowLoadIcon" class="form-select">
+                            <option value="/image/varios.png">Varios</option>
+                            <option value="/image/milk.png">Lacteos</option>
+                            <option value="/image/meat.png">Carnes</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="windowLoadInfo" class="form-label">Agrega detalle de tu compra</label>
+                        <textarea class="form-control" id="windowLoadInfo" rows="3"></textarea>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" class="btnstyle" id="windowLoadAdd">Agregar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" class="btnstyle">Cerrar</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- bootstrap javascript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+        <!-- app.js -->
+        <script src="/script/main.js"></script>
+</body>
+
+</html>
